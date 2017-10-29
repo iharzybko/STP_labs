@@ -1,96 +1,114 @@
-<h2>Регистрация</h2>
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="lastName">Фамилия:</label>
-    <div class="col-xs-9">
-      <input type="text" class="form-control" id="lastName" placeholder="Введите фамилию">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="firstName">Имя:</label>
-    <div class="col-xs-9">
-      <input type="text" class="form-control" id="firstName" placeholder="Введите имя">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="fatherName">Отчество:</label>
-    <div class="col-xs-9">
-      <input type="text" class="form-control" id="fatherName" placeholder="Введите отчество">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3">Дата рождения:</label>
-    <div class="col-xs-3">
-      <select class="form-control">
-        <option>Дата</option>
-      </select>
-    </div>
-    <div class="col-xs-3">
-      <select class="form-control">
-        <option>Месяц</option>
-      </select>
-    </div>
-    <div class="col-xs-3">
-      <select class="form-control">
-        <option>Год</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="inputEmail">Email:</label>
-    <div class="col-xs-9">
-      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="inputPassword">Пароль:</label>
-    <div class="col-xs-9">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Введите пароль">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="confirmPassword">Подтвердите пароль:</label>
-    <div class="col-xs-9">
-      <input type="password" class="form-control" id="confirmPassword" placeholder="Введите пароль ещё раз">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="phoneNumber">Телефон:</label>
-    <div class="col-xs-9">
-      <input type="tel" class="form-control" id="phoneNumber" placeholder="Введите номер телефона">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="postalAddress">Адрес:</label>
-    <div class="col-xs-9">
-      <textarea rows="3" class="form-control" id="postalAddress" placeholder="Введите адрес"></textarea>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3">Пол:</label>
-    <div class="col-xs-2">
-      <label class="radio-inline">
-        <input type="radio" name="genderRadios" value="male"> Мужской
-      </label>
-    </div>
-    <div class="col-xs-2">
-      <label class="radio-inline">
-        <input type="radio" name="genderRadios" value="female"> Женский
-      </label>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-xs-offset-3 col-xs-9">
-      <label class="checkbox-inline">
-        <input type="checkbox" value="agree">  Я согласен с <a href="#">условиями</a>.
-      </label>
-    </div>
-  </div>
-  <br />
-  <div class="form-group">
-    <div class="col-xs-offset-3 col-xs-9">
-      <input type="submit" class="btn btn-primary" value="Регистрация">
-      <input type="reset" class="btn btn-default" value="Очистить форму">
-    </div>
-  </div>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properties -->
+    <title>Bootstrap 4 Register Form</title>
+
+    <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="registration.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+</head>
+<body>
+<div class="container">
+    <form class="form-horizontal" role="form" method="POST" action="/register">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h2>Register New User</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="name">Name</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                        <input type="text" name="name" class="form-control" id="name"
+                               placeholder="John Doe" required autofocus>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                            <!-- Put name validation error messages here -->
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="email">E-Mail Address</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                        <input type="text" name="email" class="form-control" id="email"
+                               placeholder="you@example.com" required autofocus>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                            <!-- Put e-mail validation error messages here -->
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="password">Password</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-danger">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                        <input type="password" name="password" class="form-control" id="password"
+                               placeholder="Password" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="password">Confirm Password</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem">
+                            <i class="fa fa-repeat"></i>
+                        </div>
+                        <input type="password" name="password-confirmation" class="form-control"
+                               id="password-confirm" placeholder="Password" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success"><i class="fa fa-user-plus"></i> Register</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
